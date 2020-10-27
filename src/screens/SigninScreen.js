@@ -13,7 +13,7 @@ const {state, signin, clearErrorMessage} = useContext(Context)
         <View style={styles.container}>
             <NavigationEvents onWillFocus={clearErrorMessage}/>
             <AuthForm
-            headerText='Sign In to your Accout'
+            headerText='Sign In to your Account'
             errorMessage={state.errorMessage}
             onSubmit={signin}
             sumbitButtonText='Sign In'
