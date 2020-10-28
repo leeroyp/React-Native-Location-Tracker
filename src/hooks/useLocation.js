@@ -5,8 +5,6 @@ import { sub } from 'react-native-reanimated';
 export default (shouldTrack, callback) => {
     const [err, setErr] = useState(null)
 
-    
-
       useEffect(() => {
         let subscriber
 
