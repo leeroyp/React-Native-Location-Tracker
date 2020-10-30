@@ -13,7 +13,6 @@ const TrackListScreen = ({navigation}) => {
     
     <>
         <NavigationEvents onWillFocus ={fetchTracks}/>
-            <Text style={{fontSize:48}}>TrackListScreen</Text>
             <FlatList 
             data={state}
             keyExtractor={item => item._id}
@@ -22,6 +21,7 @@ const TrackListScreen = ({navigation}) => {
                 navigation.navigate('TrackDetail', {_id: item._id})
 
                 }>
+                    
                     <ListItem  chevron title={item.name}/>
                 </TouchableOpacity>
             }}
@@ -33,6 +33,9 @@ const TrackListScreen = ({navigation}) => {
     )
 }
 
+TrackListScreen.navigationOptions = {
+    title:'Tracks'
+}
 const styles= StyleSheet.create ({
 
 });
